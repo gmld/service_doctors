@@ -2,11 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
 const mongo_client = require('mongodb').MongoClient;
-const mongo_url = "mongodb://localhost:27017/doctors";
+const mongo_url = "mongodb://mongo:27017/doctors";
 const collection = "doctors";
 const endpoint = "/doctors";
 
-// for parsing application/json
 app.use(bodyParser.json());
 
 app.get(endpoint, function (req, res) {
@@ -25,4 +24,4 @@ app.get(endpoint, function (req, res) {
 
 });
 
-app.listen(3003, () => console.log('Example app listening on port 3003!'))
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
