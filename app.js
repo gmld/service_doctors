@@ -24,4 +24,12 @@ app.get(endpoint, function (req, res) {
 
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.get('/', function (req, res) {
+    return res.status(200).send({
+        "service_name":"doctors",
+        "version": "1.0"
+    })
+});
+
+
+app.listen(3003, () => console.log('Example app listening on port 3003!'))
